@@ -1,0 +1,17 @@
+p{
+    font-weight: bold;
+    text-align: center;
+    background-color: grey;
+    height: 30px;
+    padding-top: 10px;
+}
+
+p svg{
+    height: 50px;
+    position: absolute;    
+}
+p .usr-icon{
+    float: right;
+    margin-top: -15px;
+    cursor: pointer;
+}
