@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  category:string = '';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showProduct(param){
+    this.category = param;
   }
 
 }

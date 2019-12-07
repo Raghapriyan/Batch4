@@ -4,12 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ElectronicsComponent } from './products/electronics/electronics.component';
+import { ClothingComponent } from './products/clothing/clothing.component';
+import { FurnitureComponent } from './products/furniture/furniture.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ElectronicsComponent,
+    ClothingComponent,
+    FurnitureComponent
   ],
   imports: [
     BrowserModule,

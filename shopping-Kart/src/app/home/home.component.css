@@ -14,4 +14,21 @@ p .usr-icon{
     float: right;
     margin-top: -15px;
     cursor: pointer;
+    margin-right: 50px;
+}
+
+.in-line{
+    display: inline-block;
+}
+
+.categories{
+    margin: 10px;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.sub-menu {
+    width: 100px;
+    background-color: lightcoral;
+    height: 1000px;
 }
