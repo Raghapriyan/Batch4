@@ -1,29 +1,35 @@
-<div>
-		<div class="logo in-line">Logo</div><p><span>Welcome to Shopping Kart!!!</span> <span routerLink='/login' class="usr-icon"><svg id="Layer_1" style="enable-background:new 0 0 40 40;" version="1.1" viewBox="0 0 40 40" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
-			.st0{fill:none;stroke:#C0C3CD;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			.st1{fill:#EBEFF2;stroke:#C0C3CD;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			.st2{fill:#F9E0B2;stroke:#FCB416;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			.st3{fill:none;stroke:#408ECC;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			.st4{fill:none;stroke:#35B8B2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			.st5{fill:#CBE6F8;stroke:#408ECC;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			.st6{fill:none;stroke:#FCB416;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			.st7{fill:#B1E0E0;stroke:#35B8B2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			.st8{fill:none;stroke:#35B8B2;stroke-width:2;stroke-miterlimit:10;}
-			.st9{fill:#EBEFF2;stroke:#C0C3CD;stroke-width:2;stroke-miterlimit:10;}
-			.st10{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-		</style><g><path class="st4" d="M29.8565674,25.8551807V32H10.1434326v-6.1448193c0-3.116291,2.6394186-5.6356621,5.8836784-5.6356621   l3.9774761,4.9224243l3.9683018-4.9224243C27.2171478,20.2195187,29.8565674,22.7388897,29.8565674,25.8551807z"/><ellipse class="st2" cx="19.7547703" cy="13.0011425" rx="4.5457697" ry="5.001143"/><g><line class="st4" x1="25.0526333" x2="25.0526333" y1="32" y2="27.7845478"/><line class="st4" x1="14.9473658" x2="14.9473658" y1="32" y2="27.7845478"/></g></g></svg></span></p>
+<div class="jumbotron">
+	<h2>Welcome to Shopping Kart!!!</h2><span routerLink='/login' class="usr-icon"><svg id="Layer_1" style="enable-background:new 0 0 40 40;" version="1.1" viewBox="0 0 40 40" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+		.st0{fill:none;stroke:#C0C3CD;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st1{fill:#EBEFF2;stroke:#C0C3CD;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st2{fill:#F9E0B2;stroke:#FCB416;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st3{fill:none;stroke:#408ECC;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st4{fill:none;stroke:#35B8B2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st5{fill:#CBE6F8;stroke:#408ECC;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st6{fill:none;stroke:#FCB416;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st7{fill:#B1E0E0;stroke:#35B8B2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st8{fill:none;stroke:#35B8B2;stroke-width:2;stroke-miterlimit:10;}
+		.st9{fill:#EBEFF2;stroke:#C0C3CD;stroke-width:2;stroke-miterlimit:10;}
+		.st10{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	</style><g><path class="st4" d="M29.8565674,25.8551807V32H10.1434326v-6.1448193c0-3.116291,2.6394186-5.6356621,5.8836784-5.6356621   l3.9774761,4.9224243l3.9683018-4.9224243C27.2171478,20.2195187,29.8565674,22.7388897,29.8565674,25.8551807z"/><ellipse class="st2" cx="19.7547703" cy="13.0011425" rx="4.5457697" ry="5.001143"/><g><line class="st4" x1="25.0526333" x2="25.0526333" y1="32" y2="27.7845478"/><line class="st4" x1="14.9473658" x2="14.9473658" y1="32" y2="27.7845478"/></g></g></svg></span>
 </div>
 
-<div class="sub-menu in-line">
-		<div class="categories" (click) = "showProduct('electornics')">Electorincs</div><br/>
-		<div class="categories" (click) = "showProduct('clothing')">Clothing</div><br/>
-		<div class="categories" (click) = "showProduct('furniture')">Furniture</div><br/>
+<div class="d-flex" id="wrapper">
+<!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+	<div class="list-group list-group-flush">
+		<a href="#" class="list-group-item list-group-item-action bg-light" (click) = "showProduct('electornics')">Electronics</a>
+		<a href="#" class="list-group-item list-group-item-action bg-light" (click) = "showProduct('clothing')">Clothing</a>
+		<a href="#" class="list-group-item list-group-item-action bg-light" (click) = "showProduct('furniture')">Furniture</a>
+	</div>
 </div>
 
-<div class="product-content in-line">
-
-	<app-clothing *ngIf="category == 'clothing'"></app-clothing>
-	<app-electronics *ngIf="category == 'electornics'"></app-electronics>
-	<app-furniture *ngIf="category == 'furniture'"></app-furniture>
-
+<!-- Page Content -->
+<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<app-clothing *ngIf="category == 'clothing'"></app-clothing>
+			<app-electronics *ngIf="category == 'electornics'"></app-electronics>
+			<app-furniture *ngIf="category == 'furniture'"></app-furniture>
+		</div>
+	</div>
 </div>

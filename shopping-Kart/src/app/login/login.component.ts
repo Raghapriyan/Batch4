@@ -12,4 +12,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  welcomeMsg: string = "Welcome to shopping kart. Please login to proceed.";
+
 }
