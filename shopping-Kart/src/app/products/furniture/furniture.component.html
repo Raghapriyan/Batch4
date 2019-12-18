@@ -1,1 +1,7 @@
-<p>furniture works!</p>
+<div class="card" style="width: 18rem;" *ngFor="let eachData of furniture">
+    <div class="card-body">
+    <h5 class="card-title">{{ eachData.name }}</h5>
+    <p class="card-text">{{ eachData.Qty }}</p>
+</div>
+<br><br>
+</div>

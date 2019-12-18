@@ -9,6 +9,7 @@ import { ElectronicsComponent } from './products/electronics/electronics.compone
 import { ClothingComponent } from './products/clothing/clothing.component';
 import { FurnitureComponent } from './products/furniture/furniture.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { OpticalsComponent } from './products/opticals/opticals.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     HomeComponent,
     ElectronicsComponent,
     ClothingComponent,
-    FurnitureComponent
+    FurnitureComponent,
+    OpticalsComponent
   ],
   imports: [
     BrowserModule,
