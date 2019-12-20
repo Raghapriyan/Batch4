@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   category:string = '';
+  cartDisplay: boolean = false;
+  selectedProduct = {id: 21, category: "Electronics", name: "Mobile", Qty: 5};
+
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -24,5 +27,8 @@ export class HomeComponent implements OnInit {
     console.log(arg2);
     this.router.navigateByUrl('/login');
   }
-
+  
+  showCart(){
+    this.cartDisplay = !this.cartDisplay;
+  }
 }

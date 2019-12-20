@@ -21,4 +21,8 @@ export class ElectronicsComponent implements OnInit {
     })
   }
 
+  fnAddToCart(data){
+    console.log(data);
+  }
+
 }

@@ -1,7 +1,13 @@
-<div class="card" style="width: 18rem;" *ngFor="let eachData of electronics">
+
+<ng-container *ngFor="let eachData of electronics">
+    <div class="card product" style="width: 18rem;">
             <div class="card-body">
             <h5 class="card-title">{{ eachData.name }}</h5>
             <p class="card-text">{{ eachData.Qty }}</p>
         </div>
-        <br/><br/>
     </div>
+
+    <button type="button" class="btn btn-primary product" (click)="fnAddToCart(eachData)">
+        Add to Cart
+      </button>
+</ng-container>

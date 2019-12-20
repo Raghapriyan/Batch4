@@ -10,6 +10,7 @@ import { ClothingComponent } from './products/clothing/clothing.component';
 import { FurnitureComponent } from './products/furniture/furniture.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { OpticalsComponent } from './products/opticals/opticals.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { OpticalsComponent } from './products/opticals/opticals.component';
     ElectronicsComponent,
     ClothingComponent,
     FurnitureComponent,
-    OpticalsComponent
+    OpticalsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     Routing,
-    ButtonsModule
+    ButtonsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
