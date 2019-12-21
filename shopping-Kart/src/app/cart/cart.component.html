@@ -4,13 +4,15 @@
             <td>S.No</td>
             <td>Product Name</td>
             <td>Qty</td>
+            <td>Action</td>
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor = "let eachData of cartDetails">
         <td>1</td>
-        <td>{{ productsInCart.name }}</td>
-        <td>{{ productsInCart.Qty }}</td>
+        <td>{{ eachData.name }}</td>
+        <td>{{ eachData.Qty }}</td>
+        <td><button type="button" class="btn btn-primary product" (click) = "fnUpdateCart('Dec', eachData)"> - </button> / <button type="button" class="btn btn-primary product" (click) = "fnUpdateCart('Inc', eachData)"> + </button></td>
     </tr>
     </tbody>
 </table>

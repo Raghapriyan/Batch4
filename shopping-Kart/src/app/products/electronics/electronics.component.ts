@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
 @Component({
@@ -8,7 +8,9 @@ import { HttpClient } from '@angular/common/http'
 })
 export class ElectronicsComponent implements OnInit {
 
-  electronics;
+  electronics:any;
+
+  @Output() sendProduct = new EventEmitter();
 
   constructor(private http: HttpClient) { }
 
@@ -22,7 +24,7 @@ export class ElectronicsComponent implements OnInit {
   }
 
   fnAddToCart(data){
-    console.log(data);
+    this.sendProduct.emit(data);
   }
 
 }

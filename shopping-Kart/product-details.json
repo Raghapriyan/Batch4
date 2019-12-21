@@ -1,13 +1,58 @@
 {
-    "products": [
-        {"id": 10, "category": "Clothing", "name": "Shirts", "Qty": 10 },
-        {"id": 11, "category": "Clothing", "name": "Jeans", "Qty": 20 },
-        {"id": 12, "category": "Clothing", "name": "Formal Pants", "Qty": 30 },
-        {"id": 21, "category": "Electronics", "name": "Mobile", "Qty": 10 },
-        {"id": 22, "category": "Electronics", "name": "Laptops", "Qty": 20 },
-        {"id": 23, "category": "Electronics", "name": "Headset", "Qty": 30 },
-        {"id": 31, "category": "Furniture", "name": "Table", "Qty": 10 },
-        {"id": 32, "category": "Furniture", "name": "Chair", "Qty": 20 },
-        {"id": 33, "category": "Furniture", "name": "Dinning Table", "Qty": 30 }
-    ]
+  "products": [
+    {
+      "id": 10,
+      "category": "Clothing",
+      "name": "Shirts",
+      "Qty": 10
+    },
+    {
+      "id": 11,
+      "category": "Clothing",
+      "name": "Jeans",
+      "Qty": 20
+    },
+    {
+      "id": 12,
+      "category": "Clothing",
+      "name": "Formal Pants",
+      "Qty": 30
+    },
+    {
+      "id": 21,
+      "category": "Electronics",
+      "name": "Mobile",
+      "Qty": 10
+    },
+    {
+      "id": 22,
+      "category": "Electronics",
+      "name": "Laptops",
+      "Qty": 18
+    },
+    {
+      "id": 23,
+      "category": "Electronics",
+      "name": "Headset",
+      "Qty": 30
+    },
+    {
+      "id": 31,
+      "category": "Furniture",
+      "name": "Table",
+      "Qty": 10
+    },
+    {
+      "id": 32,
+      "category": "Furniture",
+      "name": "Chair",
+      "Qty": 20
+    },
+    {
+      "id": 33,
+      "category": "Furniture",
+      "name": "Dinning Table",
+      "Qty": 30
+    }
+  ]
 }

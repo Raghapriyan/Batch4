@@ -1,0 +1,10 @@
+{
+  "cart": [
+    {
+      "id": 22,
+      "category": "Electronics",
+      "name": "Laptops",
+      "Qty": 2
+    }
+  ]
+}
