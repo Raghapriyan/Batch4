@@ -11,6 +11,8 @@ import { FurnitureComponent } from './products/furniture/furniture.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { OpticalsComponent } from './products/opticals/opticals.component';
 import { CartComponent } from './cart/cart.component';
+import { ProductServiceService } from './product-service.service';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import { CartComponent } from './cart/cart.component';
     BrowserModule,
     HttpClientModule,
     Routing,
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [ProductServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

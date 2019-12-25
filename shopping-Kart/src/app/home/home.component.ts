@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ProductServiceService } from '../product-service.service';
 import * as _ from 'lodash';
 
 
@@ -15,9 +16,10 @@ export class HomeComponent implements OnInit {
   cartDisplay: boolean = false;
   selectedProduct = [];
 
-  constructor(private router: Router, private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient, private prodService: ProductServiceService) { }
 
   ngOnInit() {
+    this.prodService.getAllProducts();
   }
 
   showProduct(param){
@@ -36,30 +38,7 @@ export class HomeComponent implements OnInit {
 
   fnsendProduct (data){
 
-    let selectedProd = _.cloneDeep(data);
-    
-    this.http.get('http://localhost:3001/cart/' + data.id).subscribe((existingProd: any)=>{
-        existingProd.Qty = existingProd.Qty + 1;
-        this.http.put('http://localhost:3001/cart/'+ existingProd.id, existingProd).subscribe((result) => {
-          this.fnUpdateProdDatabase(data);
-        })
-    },
-    (error) => {
-      console.log(error);
-        if(error.status == 404){
-          selectedProd.Qty = 1;
-          this.http.post('http://localhost:3001/cart', selectedProd).subscribe((result)=>{
-            this.fnUpdateProdDatabase(data);
-          })   
-        }
-      }
-    )
-
-    // this.selectedProduct.push(data);
-  }
-
-  fnUpdateProdDatabase(prod){    
-    prod.Qty = prod.Qty - 1;
-    this.http.put('http://localhost:3000/products/'+ prod.id, prod).subscribe();
+    this.prodService.addDataToCart(data);
+    // this.prodService.updateProdQty(data, false);
   }
 }

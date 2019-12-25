@@ -1,10 +1,22 @@
 {
   "cart": [
     {
+      "id": 21,
+      "category": "Electronics",
+      "name": "Mobile",
+      "Qty": 2
+    },
+    {
       "id": 22,
       "category": "Electronics",
       "name": "Laptops",
-      "Qty": 2
+      "Qty": 5
+    },
+    {
+      "id": 23,
+      "category": "Electronics",
+      "name": "Headset",
+      "Qty": 1
     }
   ]
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import { ProductServiceService  } from '../../product-service.service';
 
 @Component({
   selector: 'app-electronics',
@@ -12,11 +13,11 @@ export class ElectronicsComponent implements OnInit {
 
   @Output() sendProduct = new EventEmitter();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private ProdService: ProductServiceService) { }
 
   ngOnInit() {
 
-    this.http.get('http://localhost:3000/products').subscribe((data:[any]) => {
+    this.ProdService.getAllProducts().subscribe((data:[any]) => {
       this.electronics = data.filter(function(eachData){
         return eachData.category == "Electronics";
       })

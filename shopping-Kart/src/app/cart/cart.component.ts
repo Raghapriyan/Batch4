@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ProductServiceService } from '../product-service.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,10 +10,11 @@ import { HttpClient } from '@angular/common/http';
 export class CartComponent implements OnInit {
 
   cartDetails:any;
+  noProd: boolean = false;
 
   @Input() productsInCart: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private prodService: ProductServiceService) { }
 
   ngOnInit() {
     this.loadCartData();
@@ -22,36 +24,17 @@ export class CartComponent implements OnInit {
 
     if(operation == 'Inc'){
       prod.Qty = prod.Qty + 1;
-      this.http.put('http://localhost:3001/cart/'+ prod.id, prod).subscribe();
-
-      this.http.get('http://localhost:3000/products/' + prod.id).subscribe((data: any) => {
-        data.Qty = data.Qty - 1;
-        this.http.put('http://localhost:3000/products/'+ data.id, data).subscribe();
-      });
-      
-      this.loadCartData();
+      this.prodService.updateCartQty(prod, true);      
     }
     else{
-
+      console.log('Minus');
       prod.Qty = prod.Qty - 1;
-
-      this.http.put('http://localhost:3001/cart/'+ prod.id, prod).subscribe();
-
-      this.http.get('http://localhost:3000/products/' + prod.id).subscribe((data: any) => {
-        data.Qty = data.Qty + 1;
-        this.http.put('http://localhost:3000/products/'+ data.id, data).subscribe();
-      });
-
-      if(prod.Qty == 0){
-        this.http.delete('http://localhost:3001/cart/'+ prod.id).subscribe();
-      }
-
-      this.loadCartData();
-    }        
+      this.prodService.updateCartQty(prod, false);
+    }
   }
 
   loadCartData(){
-    this.http.get('http://localhost:3001/cart').subscribe((data)=>{
+    this.prodService.getAllCart().subscribe((data)=>{
       this.cartDetails = data;    
     })
   }
