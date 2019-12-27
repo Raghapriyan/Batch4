@@ -26,7 +26,6 @@ export class ProductServiceService {
 
   addDataToCart(data){
     this.getCartDataByID(data.id).subscribe((cartData: any) => {
-      console.log('cart', cartData);
       cartData.Qty = cartData.Qty + 1;
       this.http.put('http://localhost:3001/cart/' + cartData.id, cartData).subscribe();
       this.updateProdQty(data, false);
@@ -34,7 +33,6 @@ export class ProductServiceService {
     (error) => {
       let cartData = _.cloneDeep(data);
       cartData.Qty = 1;
-      console.log('Inside Error', cartData);
       this.http.post('http://localhost:3001/cart/', cartData).subscribe();
       this.updateProdQty(data, false);
     });
@@ -43,9 +41,6 @@ export class ProductServiceService {
   updateCartQty(data, incFlag){
 
     this.getProductByID(data.id).subscribe((prodData: any) => {
-      console.log('before', prodData.Qty)
-      // prodData.Qty = prodData.Qty - (incFlag != true ? 1 : -1);
-      // console.log('after', prodData.Qty);
       this.updateProdQty(prodData, !incFlag);
     });
 
@@ -60,11 +55,9 @@ export class ProductServiceService {
 
   updateProdQty(data, incFlag){
     if(incFlag){
-      console.log('inside Inc');
       data.Qty = data.Qty + 1;
     }
     else{
-      console.log('inside Dec');
       data.Qty = data.Qty - 1;
     }
     return this.http.put('http://localhost:3000/products/' + data.id, data).subscribe();

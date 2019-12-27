@@ -13,12 +13,16 @@ import * as _ from 'lodash';
 export class HomeComponent implements OnInit {
 
   category:string = '';
+  loggedInTime: any;
   cartDisplay: boolean = false;
+  toggleTime = "longDate";
   selectedProduct = [];
+  userName = "Raghapriyan, Sivaraj, M"
 
   constructor(private router: Router, private http: HttpClient, private prodService: ProductServiceService) { }
 
   ngOnInit() {
+    this.loggedInTime = new Date();
     this.prodService.getAllProducts();
   }
 
@@ -27,8 +31,6 @@ export class HomeComponent implements OnInit {
   }
 
   fnLogin(arg1, arg2){
-    console.log(arg1);
-    console.log(arg2);
     this.router.navigateByUrl('/login');
   }
   
@@ -37,8 +39,17 @@ export class HomeComponent implements OnInit {
   }
 
   fnsendProduct (data){
-
     this.prodService.addDataToCart(data);
-    // this.prodService.updateProdQty(data, false);
+  }
+
+  fnToggleDate(){
+
+    if(this.toggleTime == 'shortDate'){
+      this.toggleTime = 'longDate';
+    }
+    else{
+      this.toggleTime = 'shortDate';
+    }
+
   }
 }

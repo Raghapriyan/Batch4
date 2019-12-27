@@ -13,10 +13,12 @@ import { OpticalsComponent } from './products/opticals/opticals.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductServiceService } from './product-service.service';
 import { AlertModule } from 'ngx-bootstrap/alert';
+import { FormatUserNamePipe } from './utility/userNamePipe';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FormatUserNamePipe,
     LoginComponent,
     HomeComponent,
     ElectronicsComponent,
