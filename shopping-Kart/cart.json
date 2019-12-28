@@ -10,13 +10,13 @@
       "id": 22,
       "category": "Electronics",
       "name": "Laptops",
-      "Qty": 5
+      "Qty": 6
     },
     {
       "id": 23,
       "category": "Electronics",
       "name": "Headset",
-      "Qty": 1
+      "Qty": 2
     }
   ]
 }

@@ -1,3 +1,12 @@
 .product{
     margin-bottom: 20px;
 }
+
+.smiley-img{
+    cursor: pointer;
+}
+
+.smiley-img svg{
+    height: 25px;
+    padding: 3px;
+}

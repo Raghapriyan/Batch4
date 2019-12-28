@@ -14,6 +14,7 @@ import { CartComponent } from './cart/cart.component';
 import { ProductServiceService } from './product-service.service';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { FormatUserNamePipe } from './utility/userNamePipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormatUserNamePipe } from './utility/userNamePipe';
     ClothingComponent,
     FurnitureComponent,
     OpticalsComponent,
-    CartComponent
+    CartComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

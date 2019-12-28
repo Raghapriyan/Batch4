@@ -66,8 +66,9 @@
 	   />
    <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g> </g>   </svg>   </span>	
 
-   	<!-- Pipes Example: date:"MM/dd/yy hh:mm:ss a" -->
-	<span class="fl-rgt logged-in-time"> Logged In Time : {{ loggedInTime | date: toggleTime | uppercase }} </span>	
+	   <!-- Pipes Example:  -->
+	<!-- <span class="fl-rgt logged-in-time"> Logged In Date : {{ loggedInTime | date:"MM/dd/yy hh:mm:ss a" }} </span>	 -->
+	<span class="fl-rgt logged-in-time" appHighlight [highlightcolor]="'blue'"> Logged In Time : {{ loggedInTime | date: toggleTime | uppercase }} </span>	
 
 </div>
 

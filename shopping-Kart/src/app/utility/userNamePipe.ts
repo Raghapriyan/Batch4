@@ -8,7 +8,8 @@ export class FormatUserNamePipe implements PipeTransform{
         userName = userName.replace(/,/g, '');
         if(!msg){
             msg = "Hi"
-        }    
+        } 
+
         greetings = greetings ? greetings : "user";
 
         // return msg + " " + greetings + ", " + userName;

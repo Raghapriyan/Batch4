@@ -7,6 +7,74 @@
         </div>
     </div>
 
+
+<ng-container [ngSwitch]="eachData.liked">
+
+<span class="smiley-img" *ngSwitchCase="'love'">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 473.931 473.931" style="enable-background:new 0 0 473.931 473.931;" xml:space="preserve">
+<circle style="fill:#FFC10E;" cx="236.966" cy="236.966" r="236.966"/>
+<g>
+	<path style="fill:#ED3533;" d="M182.13,109.97c-14.133,0-27.262,6.892-35.154,18.432l-1.628,2.069l-1.089-1.388
+		c-7.802-11.962-20.954-19.109-35.232-19.109c-24.363,0-42.042,17.684-42.042,42.039c0,35.962,65.107,88.968,69.855,92.784
+		c2.241,2.144,5.175,3.323,8.288,3.323s6.047-1.175,8.288-3.326c4.763-3.847,70.753-57.683,70.753-92.781
+		C224.169,127.654,206.489,109.97,182.13,109.97z"/>
+	<path style="fill:#ED3533;" d="M366.696,109.97c-14.133,0-27.262,6.892-35.154,18.432l-1.628,2.069l-1.089-1.388
+		c-7.802-11.962-20.954-19.109-35.232-19.109c-24.363,0-42.042,17.684-42.042,42.039c0,35.962,65.107,88.968,69.855,92.784
+		c2.241,2.144,5.175,3.323,8.288,3.323c3.109,0,6.043-1.175,8.288-3.326c4.76-3.843,70.749-57.683,70.749-92.781
+		C408.735,127.654,391.055,109.97,366.696,109.97z"/>
+</g>
+<path style="fill:#333333;" d="M343.254,316.86c-59.281,60.325-154.662,59.853-213.449-0.898c-8.4-8.681-21.616,4.561-13.227,13.227
+	c65.769,67.969,173.644,68.332,239.903,0.898C364.941,321.481,351.718,308.246,343.254,316.86L343.254,316.86z"/>
+<g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+
+</span>
+
+<span class="smiley-img" *ngSwitchCase="'sad'">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 473.935 473.935" style="enable-background:new 0 0 473.935 473.935;" xml:space="preserve">
+<circle style="fill:#FFC10E;" cx="236.967" cy="236.967" r="236.967"/>
+<g>
+	<path style="fill:#333333;" d="M356.671,354.1c-66.226-67.618-174.255-67.337-240.096,0.703
+		c-8.389,8.666,4.827,21.912,13.227,13.227c58.87-60.83,154.386-61.204,213.641-0.703C351.896,375.96,365.116,362.721,356.671,354.1
+		L356.671,354.1z"/>
+	<circle style="fill:#333333;" cx="164.938" cy="155.232" r="37.216"/>
+	<circle style="fill:#333333;" cx="305.667" cy="155.232" r="37.216"/>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+
+</span>
+
+<span class="smiley-img" *ngSwitchCase="'very happy'">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 473.931 473.931" style="enable-background:new 0 0 473.931 473.931;" xml:space="preserve">
+<circle style="fill:#FFC10E;" cx="236.966" cy="236.966" r="236.966"/>
+<path style="fill:#333333;" d="M81.391,237.127c0,85.911,69.649,155.56,155.56,155.56c85.915,0,155.567-69.649,155.567-155.56
+   H81.391z"/>
+<path style="fill:#CA2027;" d="M150.452,298.705c0,47.771,38.731,86.498,86.498,86.498c47.775,0,86.502-38.731,86.502-86.498
+   H150.452z"/>
+<g>
+   <circle style="fill:#333333;" cx="164.937" cy="155.231" r="37.216"/>
+   <circle style="fill:#333333;" cx="305.664" cy="155.231" r="37.216"/>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+
+</span>
+
+<span class="smiley-img" *ngSwitchDefault>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 473.931 473.931" style="enable-background:new 0 0 473.931 473.931;" xml:space="preserve">
+<circle style="fill:#FFC10E;" cx="236.966" cy="236.966" r="236.966"/>
+<g>
+	<path style="fill:#333333;" d="M383.164,237.123c-1.332,80.699-65.514,144.873-146.213,146.206
+		c-80.702,1.332-144.907-67.52-146.206-146.206c-0.198-12.052-18.907-12.071-18.709,0c1.5,90.921,73.993,163.414,164.914,164.914
+		c90.929,1.5,163.455-76.25,164.922-164.914C402.071,225.052,383.362,225.071,383.164,237.123L383.164,237.123z"/>
+	<circle style="fill:#333333;" cx="164.937" cy="155.227" r="37.216"/>
+	<circle style="fill:#333333;" cx="305.664" cy="155.227" r="37.216"/>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+
+</span>
+
+</ng-container>
+
     <button type="button" class="btn btn-primary product" (click)="fnAddToCart(eachData)" ng-disabled = "eachData.Qty == 0">
         Add to Cart
       </button>

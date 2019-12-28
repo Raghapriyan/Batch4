@@ -27,7 +27,6 @@ export class CartComponent implements OnInit {
       this.prodService.updateCartQty(prod, true);      
     }
     else{
-      console.log('Minus');
       prod.Qty = prod.Qty - 1;
       this.prodService.updateCartQty(prod, false);
     }

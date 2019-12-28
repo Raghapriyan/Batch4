@@ -22,19 +22,22 @@
       "id": 21,
       "category": "Electronics",
       "name": "Mobile",
-      "Qty": 8
+      "Qty": 8,
+      "liked": "very happy"
     },
     {
       "id": 22,
       "category": "Electronics",
       "name": "Laptops",
-      "Qty": 8
+      "Qty": 7,
+      "liked": "love"
     },
     {
       "id": 23,
       "category": "Electronics",
       "name": "Headset",
-      "Qty": 29
+      "Qty": 28,
+      "liked": "sad"
     },
     {
       "id": 31,
