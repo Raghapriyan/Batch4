@@ -86,7 +86,7 @@
 <div id="page-content-wrapper">
 		<div class="container-fluid">
 			<app-clothing *ngIf="category == 'clothing'"></app-clothing>
-			<app-electronics *ngIf="category == 'electornics'" (sendProduct) = "fnsendProduct($event)"></app-electronics>
+			<app-electronics *ngIf="category == 'electornics'" (sendProduct) = "fnsendProduct($event)" [childToggleTime] = "toggleTime"></app-electronics>
 			<app-furniture *ngIf="category == 'furniture'"></app-furniture>
 		</div>
 	</div>

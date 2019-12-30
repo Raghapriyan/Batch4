@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ProductServiceService  } from '../../product-service.service';
 
@@ -10,10 +10,24 @@ import { ProductServiceService  } from '../../product-service.service';
 export class ElectronicsComponent implements OnInit {
 
   electronics:any;
+  timeFormat: string = "This is time format";
 
   @Output() sendProduct = new EventEmitter();
 
+  @Input() childToggleTime: string;
+
   constructor(private http: HttpClient, private ProdService: ProductServiceService) { }
+
+  ngOnChanges(){
+
+    if(this.childToggleTime == 'longDate'){
+      this.timeFormat = `Long date is selected`;
+    }
+    else{
+      this.timeFormat = `Short date is selected`;
+    }
+
+  }
 
   ngOnInit() {
 
