@@ -26,7 +26,6 @@ export class ElectronicsComponent implements OnInit {
     else{
       this.timeFormat = `Short date is selected`;
     }
-
   }
 
   ngOnInit() {
@@ -35,6 +34,10 @@ export class ElectronicsComponent implements OnInit {
       this.electronics = data.filter(function(eachData){
         return eachData.category == "Electronics";
       })
+    })
+
+    this.ProdService.getAboutProject().subscribe((data)=>{
+      console.log(data);
     })
   }
 

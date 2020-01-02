@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import * as _ from 'lodash';
 
 @Injectable()
@@ -7,6 +8,22 @@ import * as _ from 'lodash';
 export class ProductServiceService {
 
   constructor(private http: HttpClient) { }
+
+  projectDetails = {
+    name: 'Shopping Kart',
+    desc: 'This is shopping application',
+    version: '1.0.0'
+  }
+
+  getAboutProject(){
+    const projObserver = new Observable((observer) => {
+      setTimeout(() => {
+        observer.next(this.projectDetails)
+      }, 5000)      
+    });
+
+    return projObserver;
+  }
 
   getAllProducts(){
     return this.http.get('http://localhost:3000/products');
