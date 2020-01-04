@@ -28,26 +28,15 @@ export class FeedbackReactiveFormsComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    // this.feedbackDetails.name = "";
-    // this.feedbackDetails.id = "";
-    // this.feedbackDetails.comments = "";
     this.getLatestFeedBack();
   }
 
   submitForm(){
     console.log(this.feedbackDetails.value);
-    // this.name.setValue('This is name');
-    // this.service.submitFeedBack(this.feedbackDetails.value).subscribe((response) =>{
-    //   alert('Feed back is submitted!');
-    //   this.getLatestFeedBack();
-    // })
   }
 
   // displayData(data){
-  //   this.feedbackDetails.name = data.name;
-  //   this.feedbackDetails.id = data.id;
-  //   this.feedbackDetails.comments = data.comments;
+  //   this.feedbackDetails.setValue = data;
   // }
 
   getLatestFeedBack(){
