@@ -83,4 +83,12 @@ export class ProductServiceService {
   deleteCartData(data){
     return this.http.delete('http://localhost:3001/cart/' + data.id);
   }
+
+  submitFeedBack(feedback){
+    return this.http.post('http://localhost:3001/feedback', feedback);
+  }
+
+  getFeedback(){
+    return this.http.get('http://localhost:3001/feedback');
+  }
 }

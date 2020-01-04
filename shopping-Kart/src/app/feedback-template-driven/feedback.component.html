@@ -1,0 +1,25 @@
+<div class="comments-section div-inline">
+    Name: <input type="text" placeholder="please enter Name" [(ngModel)] = "feedbackDetails.name"/> <br/><br/>
+    Email: <input type="text" placeholder="please enter email" [(ngModel)] = "feedbackDetails.id"/><br/><br/>
+    Comments: <textarea placeholder="please enter comments" [(ngModel)] = "feedbackDetails.comments"></textarea><br/><br/>
+
+    <br/><br/>
+    <button type="button" class="btn btn-primary product" (click)="submitForm()">
+        Submit Feedback
+      </button>
+</div>
+
+<div class="div-inline">
+    Below are the Feed Back 
+    <table>
+        <thead>
+                <tr><td>S.No</td><td>Name</td><td>Email</td></tr>
+        </thead>        
+        <tbody>
+            <tr *ngFor="let eachData of feedbackList; let eachIndex = index">
+                <td>{{ eachIndex + 1 }}</td><td> {{ eachData.name }}</td><td><a (click)="displayData(eachData)">{{ eachData.id }}</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

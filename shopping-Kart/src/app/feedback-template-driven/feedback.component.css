@@ -1,0 +1,20 @@
+.comments-section{
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.div-inline{
+    display: inline-block
+}
+
+tr, td {
+    border: 1px solid black;
+    border-collapse: collapse; 
+}
+
+.div-inline a {
+    cursor: pointer;
+    text-decoration-color: blue;
+    text-decoration-line: underline;
+    color: blue;
+}

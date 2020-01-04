@@ -1,0 +1,34 @@
+<form [formGroup] = "feedbackDetails" (ngSubmit) = "submitForm()">
+<div class="comments-section div-inline">    
+        Name: <input type="text" placeholder="please enter Name" formControlName = "name" required/> <br/><br/>
+        Email: <input type="text" placeholder="please enter email" formControlName = "id" required/><br/><br/>
+        Comments: <textarea placeholder="please enter comments" formControlName = "comments" required></textarea><br/><br/>
+        <div formGroupName= "address">
+            City: <input type="text" placeholder="please enter city" formControlName = "city" required/><br/><br/>
+            Street: <input type="text" placeholder="please enter street" formControlName = "street" required/><br/><br/>
+        </div>
+        
+    
+        <br/><br/>
+        <button type="submit" class="btn btn-primary product">
+            Submit Feedback
+          </button>
+    </div>
+    <!-- [disabled] = "!feedbackDetails.valid" -->
+</form>
+    
+    <div class="div-inline">
+        Below are the Feed Back 
+        <table>
+            <thead>
+                    <tr><td>S.No</td><td>Name</td><td>Email</td></tr>
+            </thead>        
+            <tbody>
+                <tr *ngFor="let eachData of feedbackList; let eachIndex = index">
+                    <td>{{ eachIndex + 1 }}</td><td> {{ eachData.name }}</td><td><a (click)="displayData(eachData)">{{ eachData.id }}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
