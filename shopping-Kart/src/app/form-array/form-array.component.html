@@ -1,0 +1,12 @@
+<div class="organise" [formGroup] = "productDetails">
+    Id: <input type="text" name="productId" class="productId" formControlName="id"/><br/><br/>
+    Name: <input type="text" name="productName" formControlName="name"/><br/><br/>
+    Qty: <input type="text" name="productQty" class="productQty" formControlName="qty"/><br/><br/>
+    <button (click)="AddCommentControl()">Add Comments</button><br/><br/>
+    <ng-container formArrayName="comments">
+        <ng-container *ngFor = "let eachControl of commentControls.controls; let i = index">
+            Comments: <input type="text" [formControlName]= "i"/> <br/><br/>
+        </ng-container>
+    </ng-container>
+    <button (click)="submitData()">Submit</button>
+</div>

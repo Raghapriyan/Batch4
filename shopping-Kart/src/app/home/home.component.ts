@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ProductServiceService } from '../product-service.service';
+import { ElectronicsComponent } from '../products/electronics/electronics.component';
 import * as _ from 'lodash';
 
 
@@ -18,6 +19,9 @@ export class HomeComponent implements OnInit {
   toggleTime = "longDate";
   selectedProduct = [];
   userName = "Raghapriyan, Sivaraj, M"
+  childData = "";
+
+  @ViewChild(ElectronicsComponent, {static: true}) electronicChild : ElectronicsComponent;
 
   constructor(private router: Router, private http: HttpClient, private prodService: ProductServiceService) { }
 
@@ -26,7 +30,12 @@ export class HomeComponent implements OnInit {
     this.prodService.getAllProducts();
   }
 
+  ngAfterViewInit(){
+    this.childData = this.electronicChild.childData;
+  }
+
   showProduct(param){
+    // console.log(this.childData);
     this.category = param;
   }
 
@@ -51,5 +60,9 @@ export class HomeComponent implements OnInit {
       this.toggleTime = 'shortDate';
     }
 
+  }
+
+  clickChild(){
+    console.log(this.childData);
   }
 }

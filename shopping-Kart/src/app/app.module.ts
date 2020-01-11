@@ -18,6 +18,7 @@ import { FormatUserNamePipe } from './utility/userNamePipe';
 import { HighlightDirective } from './highlight.directive';
 import { FeedbackComponent } from './feedback-template-driven/feedback.component';
 import { FeedbackReactiveFormsComponent } from './feedback-reactive-forms/feedback-reactive-forms.component';
+import { FormArrayComponent } from './form-array/form-array.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FeedbackReactiveFormsComponent } from './feedback-reactive-forms/feedba
     CartComponent,
     HighlightDirective,
     FeedbackComponent,
-    FeedbackReactiveFormsComponent
+    FeedbackReactiveFormsComponent,
+    FormArrayComponent
   ],
   imports: [
     BrowserModule,

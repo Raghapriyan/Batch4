@@ -8,7 +8,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ]      
     })
     .compileComponents();
   }));
@@ -22,4 +22,12 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should check Side menu showing', () => {
+  //   expect(component).toBeTruthy();
+  // });
+
+  // it('should check for user name', () => {
+  //   expect(component).toBeTruthy();
+  // });
 });

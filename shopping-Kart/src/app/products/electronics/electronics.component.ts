@@ -11,6 +11,7 @@ export class ElectronicsComponent implements OnInit {
 
   electronics:any;
   timeFormat: string = "This is time format";
+  childData:string = "I am value from Child";
 
   @Output() sendProduct = new EventEmitter();
 
@@ -43,6 +44,6 @@ export class ElectronicsComponent implements OnInit {
 
   fnAddToCart(data){
     this.sendProduct.emit(data);
-  }
+  }  
 
 }

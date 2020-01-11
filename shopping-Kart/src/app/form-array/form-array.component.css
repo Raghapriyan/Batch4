@@ -1,0 +1,14 @@
+.organise {
+    display: inline-block;
+    margin-left: 300px;
+    margin-top: 100px;
+    background-color: aquamarine;
+}
+
+.productId{
+    margin-left: 28px;
+}
+
+.productQty{
+    margin-left: 18px;
+}

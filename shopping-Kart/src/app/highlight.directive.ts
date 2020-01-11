@@ -7,7 +7,8 @@ export class HighlightDirective {
 
   @Input() highlightcolor: string;
 
-  constructor(private el: ElementRef) {
+  // constructor(private el: ElementRef)
+  constructor() {
    }
 
    @HostListener('mouseenter') onmouseenter(){
@@ -19,7 +20,7 @@ export class HighlightDirective {
   }
 
    private hightlight(color: string){
-    this.el.nativeElement.style.backgroundColor = color;
+    // this.el.nativeElement.style.backgroundColor = color;
    }
 
 }

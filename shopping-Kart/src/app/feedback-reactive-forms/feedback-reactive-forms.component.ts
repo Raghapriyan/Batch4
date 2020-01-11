@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Feedback } from '../models/feedbackModel';
 import { ProductServiceService } from '../product-service.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-feedback-reactive-forms',
@@ -13,6 +13,7 @@ export class FeedbackReactiveFormsComponent implements OnInit {
   // name = new FormControl('');
   feedbackList:any;
 
+  // *** If you want to use form group without form builder please uncomment the below code   ****
   feedbackDetails = new FormGroup({
     name : new FormControl(''),
     id : new FormControl(''),
@@ -22,8 +23,20 @@ export class FeedbackReactiveFormsComponent implements OnInit {
       street: new FormControl('')
     })
   })
+
+
+  // *** If you want to use form builder please uncomment the below code   ****
+  // formBuilder = this.fb.group({
+  //   name: [''],
+  //   id: [''],
+  //   comments: [''],
+  //   address: this.fb.group({
+  //     city: [''],
+  //     street: ['']
+  //   })
+  // })
   
-  constructor(private service: ProductServiceService) { 
+  constructor(private service: ProductServiceService, private fb: FormBuilder) { 
     // this.feedbackDetails = new  Feedback();
   }
 
@@ -32,7 +45,28 @@ export class FeedbackReactiveFormsComponent implements OnInit {
   }
 
   submitForm(){
-    console.log(this.feedbackDetails.value);
+
+    console.log(this.feedbackDetails.valid);
+    // *** If you want to use form group without form builder please uncomment the below code   ****
+    // this.feedbackDetails.setValue({
+    //   name: 'Ragha1',
+    //   id: 'r123@getMaxListeners.com',
+    //   comments: 'TEsting Comments',
+    //   address: {
+    //     city: 'Chennai',
+    //     street: 'Anna Nagar 1st Street'
+    //   }
+    // })
+
+
+    // *** If you are using form builder please uncomment the below code   ****
+    // this.formBuilder.patchValue({
+    //   address: {
+    //     city: 'Trichy',
+    //     street: 'K K Nagar 1st Street'
+    //   }
+    // })
+    // console.log(this.formBuilder.status);
   }
 
   // displayData(data){

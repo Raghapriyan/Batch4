@@ -11,6 +11,9 @@ export class FeedbackComponent implements OnInit {
 
   feedbackDetails;
   feedbackList:any;
+
+  test = "Testing";
+
   constructor(private service: ProductServiceService) { 
     this.feedbackDetails = new  Feedback();
   }
@@ -23,11 +26,12 @@ export class FeedbackComponent implements OnInit {
   }
 
   submitForm(){
-    console.log('user Details: ', this.feedbackDetails);
-    this.service.submitFeedBack(this.feedbackDetails).subscribe((response) =>{
-      alert('Feed back is submitted!');
-      this.getLatestFeedBack();
-    })
+    console.log(this.test);
+    // console.log('user Details: ', this.feedbackDetails);
+    // this.service.submitFeedBack(this.feedbackDetails).subscribe((response) =>{
+    //   alert('Feed back is submitted!');
+    //   this.getLatestFeedBack();
+    // })
   }
 
   displayData(data){

@@ -1,3 +1,5 @@
+<button (click)="clickChild()">Click Child</button>
+
 <div class="jumbotron">
 	<h2 position="static">Welcome to Shopping Kart!!!</h2>	
 	<span (click) = "fnLogin('Hi', 234)" class="usr-icon"><svg id="Layer_1" style="enable-background:new 0 0 40 40;" version="1.1" viewBox="0 0 40 40" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
@@ -91,7 +93,8 @@
 		</div>
 	</div>
 	<a href="feedbackTemplate">Click to Feedback Template</a> <br/>
-	<a href="feedbackReactive">Click to Feedback Reactive</a>
+	<a href="feedbackReactive">Click to Feedback Reactive</a><br/>
+	<a href="formArray">Click to Form Array</a><br/>
 </div>
 
 <app-cart *ngIf="cartDisplay" [productsInCart]="selectedProduct"></app-cart>
