@@ -1,0 +1,9 @@
+.bg-div {
+    background-color: lightpink;
+    height: 75px;
+    margin: 10px;
+}
+
+.bg-div span{
+    padding: 10px;
+}

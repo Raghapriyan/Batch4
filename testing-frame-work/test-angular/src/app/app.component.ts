@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-angular';
+  parentMsg = "Msg from Parent";
+  msgFromChild = "";
 
-  add(a, b){
-    return a + b;
+  fnHandleChildMsg(msg){
+    this.msgFromChild = msg;
   }
+
+  // add(a, b){
+  //   return a + b;
+  // }
 }
