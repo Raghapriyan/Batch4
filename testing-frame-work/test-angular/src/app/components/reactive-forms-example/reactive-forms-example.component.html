@@ -1,0 +1,39 @@
+<p>reactive-forms-example works!</p>
+
+<form (ngSubmit)="fnSubmit()" [formGroup]="student">
+
+    <!-- Below is simple Form COntrol Example -->
+<!-- Name <input type="text" [formControl]="name"/> -->
+
+
+
+<!-- Below is Form Group Example -->
+
+<!-- name <input type="text" formControlName = "name"/> <br/><br/>
+    age <input type="text" formControlName = "age"/> <br/><br/>
+    class <input type="text" formControlName = "class"/> <br/><br/>
+    <ng-container formGroupName = "address">
+            flat <input type="text" formControlName = "flat"/> <br/><br/>
+            street <input type="text" formControlName = "street"/> <br/><br/>
+            city <input type="text" formControlName = "city"/> <br/><br/>
+</ng-container> -->
+
+
+
+<!-- Below is Form Array Example -->
+name <input type="text" formControlName = "name"/> <br/><br/>
+    age <input type="text" formControlName = "age"/> <br/><br/>
+    class <input type="text" formControlName = "class"/> <br/><br/>
+
+
+    <ng-container formArrayName="address">
+        Address
+        <ng-container *ngFor="let eachAdd of add.controls; let i = index;">
+            <input type="text" [formControlName] = "i"/> <br/><br/>            
+        </ng-container>
+        <button (click)="fnAdd()">Add New Row</button>
+    </ng-container>
+
+<br/><br/>
+<button type="submit">Submit</button>
+</form>
