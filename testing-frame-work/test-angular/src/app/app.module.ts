@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyComponentModule } from 'src/components/myComponent.module';
 import { TemplateDrivenExampleComponent } from './components/template-driven-example/template-driven-example.component';
 import { ReactiveFormsExampleComponent } from './components/reactive-forms-example/reactive-forms-example.component';
+import { TestFrameworkExampleComponent } from './components/test-framework-example/test-framework-example.component';
 
 const Route: Routes = [
   { path: 'template-forms', component: TemplateDrivenExampleComponent },
@@ -16,7 +17,8 @@ const Route: Routes = [
   declarations: [
     AppComponent,
     TemplateDrivenExampleComponent,
-    ReactiveFormsExampleComponent
+    ReactiveFormsExampleComponent,
+    TestFrameworkExampleComponent
   ],
   imports: [
     BrowserModule,

@@ -62,7 +62,7 @@ fnAdd(){
 }
 
   fnSubmit(){
-    console.log(this.student.value);
+    console.log(this.student.status);
   }
 
 }
